@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.cisc.tictactoe.GameActivity"
+    tools:showIn="@layout/activity_game">
+
+    <TextView
+        android:id="@+id/playerView"
+        android:layout_width="match_parent"
+        android:layout_height="81dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical|center_horizontal"
+        android:padding="10dp" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="fill_vertical|fill_horizontal"
+        android:layout_weight="5"
+        android:columnCount="3"
+        android:elevation="1dp"
+        android:rowCount="3">
+
+        <Button
+            android:id="@+id/r0c0"
+            android:layout_width="@dimen/button_size"
+            android:layout_height="@dimen/button_size"
+            android:layout_column="0"
+            android:layout_row="0"
+            android:layout_weight="1"
+            tools:layout_width="@dimen/button_size" />
+
+        <Button
+            android:id="@+id/r0c1"
+            android:layout_width="@dimen/button_size"
+            android:layout_height="@dimen/button_size" />
+
+        <Button
+            android:id="@+id/r0c2"
+            android:layout_width="@dimen/button_size"
+            android:layout_height="@dimen/button_size" />
+
+        <Button
+            android:id="@+id/r1c0"
+            android:layout_width="@dimen/button_size"
+            android:layout_height="@dimen/button_size" />
+
+        <Button
+            android:id="@+id/r1c1"
+            android:layout_width="@dimen/button_size"
+            android:layout_height="@dimen/button_size" />
+
+        <Button
+            android:id="@+id/r1c2"
+            android:layout_width="@dimen/button_size"
+            android:layout_height="@dimen/button_size" />
+
+        <Button
+            android:id="@+id/r2c0"
+            android:layout_width="@dimen/button_size"
+            android:layout_height="@dimen/button_size" />
+
+        <Button
+            android:id="@+id/r2c1"
+            android:layout_width="@dimen/button_size"
+            android:layout_height="@dimen/button_size" />
+
+        <Button
+            android:id="@+id/r2c2"
+            android:layout_width="@dimen/button_size"
+            android:layout_height="@dimen/button_size" />
+    </GridLayout>
+
+</LinearLayout>
