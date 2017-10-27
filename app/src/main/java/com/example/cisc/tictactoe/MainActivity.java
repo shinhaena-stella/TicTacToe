@@ -1,5 +1,6 @@
 package com.example.cisc.tictactoe;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -10,15 +11,22 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
-    Button playButton;
+    Button playButton, action_settings;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        playButton = (Button) findViewById(R.id.playButton);
+        playButton.setOnClickListener(this);
+
+        action_settings = (Button) findViewById(R.id.action_settings);
+        action_settings.setOnClickListener(this);
+
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -32,10 +40,29 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        
-
-
     }
+
+    @Override
+    public void onClick(View v){
+
+        switch (v.getId()) {
+            case R.id.playButton:
+                Intent play;
+                play = new Intent(this, GameActivity.class);
+                startActivity(play);
+                break;
+
+            case R.id.action_settings:
+                Intent settings;
+                settings = new Intent(this, SettingsActivity.class);
+                startActivity(settings);
+                break;
+        }
+    }
+
+
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
