@@ -10,7 +10,7 @@
     tools:showIn="@layout/activity_game">
 
     <TextView
-        android:id="@+id/playerView"
+        android:id="@+id/whosturn"
         android:layout_width="match_parent"
         android:layout_height="81dp"
         android:layout_weight="1"
